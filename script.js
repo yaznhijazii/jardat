@@ -1,27 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // متغير لتخزين فهرس الشريحة الحالي لكل كاروسيل
+    // Variable to store the current slide index for each carousel
     const carousels = document.querySelectorAll('.carousel');
     
-    // دالة لإظهار الشرائح
+    // Function to show slides
     function showSlides(carousel, slideIndex) {
         const slides = carousel.querySelectorAll('img');
         if (slides.length === 0) return;
         
-        // إخفاء جميع الشرائح
+        // Hide all slides
         slides.forEach(slide => slide.classList.remove('active'));
         
-        // عرض الشريحة الحالية
+        // Show the current slide
         slides[slideIndex].classList.add('active');
     }
     
-    // دالة للتنقل بين الشرائح
+    // Function to navigate between slides
     function plusSlides(n, carousel) {
         const slides = carousel.querySelectorAll('img');
         if (slides.length === 0) return;
         
         let slideIndex = parseInt(carousel.getAttribute('data-slide-index') || '0', 10);
         
-        // حساب الفهرس الجديد للشريحة
+        // Calculate the new slide index
         slideIndex += n;
         if (slideIndex >= slides.length) {
             slideIndex = 0;
@@ -30,19 +30,18 @@ document.addEventListener('DOMContentLoaded', function() {
             slideIndex = slides.length - 1;
         }
         
-        // تعيين الفهرس الجديد في خاصية البيانات
+        // Set the new index in the data attribute
         carousel.setAttribute('data-slide-index', slideIndex);
         
-        // تحديث الشرائح
+        // Update slides
         showSlides(carousel, slideIndex);
     }
     
-    // إضافة مستمعات للأحداث لجميع الكاروسيل
+    // Add event listeners to all carousels
     carousels.forEach(carousel => {
-        const carouselId = carousel.id;
-        carousel.setAttribute('data-slide-index', '0'); // تعيين الفهرس الأول
+        carousel.setAttribute('data-slide-index', '0'); // Set initial index
         
-        // تأكد من وجود أزرار التبديل
+        // Ensure there are navigation buttons
         const prevButton = carousel.querySelector('.prev');
         const nextButton = carousel.querySelector('.next');
         
@@ -54,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             nextButton.addEventListener('click', () => plusSlides(1, carousel));
         }
         
-        // تهيئة الشرائح
+        // Initialize slides
         showSlides(carousel, 0);
     });
 });

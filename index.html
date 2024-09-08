@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,53 +10,57 @@
 <body>
   <header>
     <div class="logo">
-      <h1>موقع وداد جرادات العقاري</h1>
+      <h1>W.J Property Management</h1>
     </div>
     <nav>
       <ul>
-        <li><a href="#home">الرئيسية</a></li>
-        <li><a href="#villas">الفلل المتاحة</a></li>
-        <li><a href="#contact">تواصل معنا</a></li>
+        <li><a href="#welcome">Welcome</a></li>
+        <li><a href="#villas">Available Villas</a></li>
+        <li><a href="#contact">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="villas" class="villas-section">
-    <h2>الفلل المتاحة للإيجار</h2>
+  <section id="welcome" class="welcome-section">
+    <h2>Welcome!</h2>
+    <p>
+      We are committed to offering exceptional real estate services tailored to your needs. Whether you are searching for your dream home or looking to invest in a lucrative property, our expert team is here to guide you every step of the way. Our website provides a seamless browsing experience with a modern, user-friendly design that highlights our available properties, including luxurious villas and modern homes.
+    </p>
+  </section>
 
+  <section id="villas" class="villas-section">
+    <h2>Available Villas for Rent</h2>
     <div class="villa">
-      <h3>فيلا فاخرة في عمان</h3>
-      <div class="carousel">
+      <h3>Luxury Villa in Amman</h3>
+      <div class="carousel" id="carousel1">
         <img src="villa1-1.jpg" alt="Villa 1 Image 1">
         <img src="villa1-2.jpg" alt="Villa 1 Image 2">
         <img src="villa1-3.jpg" alt="Villa 1 Image 3">
-        <button class="prev" onclick="plusSlides(-1)">السابق</button>
-        <button class="next" onclick="plusSlides(1)">التالي</button>
+        <button class="prev" onclick="plusSlides(-1, document.getElementById('carousel1'))">Previous</button>
+        <button class="next" onclick="plusSlides(1, document.getElementById('carousel1'))">Next</button>
       </div>
-      <p>3 غرف، 2 حمام، مساحة 200 متر</p>
-      <p>السعر: 1000 دينار/شهر</p>
-      <a href="https://wa.me/962796387822" target="_blank" class="whatsapp-btn">تواصل عبر الواتساب</a>
+      <p>3 Bedrooms, 2 Bathrooms, 200 sqm</p>
+      <p>Price: 1000 JOD</p>
+      <a href="https://wa.me/962796387822" target="_blank" class="whatsapp-btn">Contact via WhatsApp</a>
     </div>
+
     <div class="villa">
-        <h3>فيلا حديثة في عبدون</h3>
-        <div class="carousel" id="carousel2">
-          <img src="villa2-1.jpg" alt="Villa 2 Image 1" class="active">
-          <img src="villa2-2.jpg" alt="Villa 2 Image 2">
-          <img src="villa2-3.jpg" alt="Villa 2 Image 3">
-          <button class="prev" onclick="plusSlides(-1, 'carousel2')">السابق</button>
-          <button class="next" onclick="plusSlides(1, 'carousel2')">التالي</button>
-        </div>
-        <p>3 غرف نوم 3 حمامات جلسة خارجية</p>
-        <p>السعر: 20000 دينار</p>
-        <a href="https://wa.me/962796387822" target="_blank" class="whatsapp-btn">تواصل عبر الواتساب</a>
+      <h3>Modern Villa in Abdoun</h3>
+      <div class="carousel" id="carousel2">
+        <img src="villa2-1.jpg" alt="Villa 2 Image 1" class="active">
+        <img src="villa2-2.jpg" alt="Villa 2 Image 2">
+        <img src="villa2-3.jpg" alt="Villa 2 Image 3">
+        <button class="prev" onclick="plusSlides(-1, document.getElementById('carousel2'))">Previous</button>
+        <button class="next" onclick="plusSlides(1, document.getElementById('carousel2'))">Next</button>
       </div>
-    </section>
-    
-    <!-- يمكنك تكرار نفس الهيكل لفلل أخرى -->
+      <p>3 Bedrooms, 3 Bathrooms, Outdoor Sitting Area</p>
+      <p>Price: 20000 JOD</p>
+      <a href="https://wa.me/962796387822" target="_blank" class="whatsapp-btn">Contact via WhatsApp</a>
+    </div>
   </section>
 
   <section id="contact" class="contact-section">
-    <h2>تواصل معنا</h2>
+    <h2>Contact Us</h2>
     <div class="contact-buttons">
       <a href="https://wa.me/962796387822" target="_blank">
         <img src="ws.png" alt="WhatsApp Logo" class="social-logo">
@@ -68,7 +72,7 @@
   </section>
 
   <footer>
-    <p>© 2024 جميع الحقوق محفوظة لموقع وداد جرادات العقاري</p>
+    <p>© 2024 All rights reserved for W.J Real Estate</p>
   </footer>
 
   <script src="script.js"></script>

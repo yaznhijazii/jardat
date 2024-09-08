@@ -1,69 +1,91 @@
-/* إعدادات عامة */
+/* General Styling */
 body {
     font-family: 'Rubik', sans-serif;
-    direction: rtl; /* تحويل اتجاه النصوص للعربية */
+    direction: ltr; /* Text direction for English */
     background-color: #fefefe;
-    color: #333; /* لون نصوص أغمق لتحسين القراءة */
+    color: #333;
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
-/* تنسيق الهيدر */
+/* Header Styling */
 header {
-    background-color: #f7f7f7; /* لون أفتح للهيدر */
+    background-color: #f7f7f7;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #4a5a54; /* إضافة خط لتحديد الهيدر */
+    border-bottom: 2px solid #4a5a54;
 }
 
 header .logo h1 {
     font-size: 2em;
     color: #4a5a54;
-    margin: 0; /* إزالة الهامش لتقليل المسافة حول النص */
+    margin: 0;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
-    gap: 15px; /* تقليل المسافة بين الروابط */
+    gap: 15px;
 }
 
 header nav ul li a {
     text-decoration: none;
     color: #4a5a54;
-    font-size: 1.1em; /* تقليل حجم النص للروابط */
-    transition: color 0.3s, border-bottom 0.3s; /* إضافة تأثير للانتقال عند التمرير */
+    font-size: 1.1em;
+    transition: color 0.3s, border-bottom 0.3s;
     padding-bottom: 5px;
 }
 
 header nav ul li a:hover {
     color: #2f3e39;
-    border-bottom: 2px solid #2f3e39; /* إضافة خط أسفل الرابط عند التمرير */
+    border-bottom: 2px solid #2f3e39;
 }
 
-/* قسم الفلل */
+/* Welcome Section */
+.welcome-section {
+    background-color: #fefefe;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.welcome-section h2 {
+    font-size: 2em;
+    color: #4a5a54;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* Villas Section */
 .villas-section {
     text-align: center;
     padding: 50px 20px;
 }
 
 .villa {
-    background-color: #fff; /* تغيير لون الخلفية */
+    background-color: #fff;
     margin: 20px auto;
     padding: 20px;
-    border-radius: 10px; /* زيادة التدوير لجعل الزوايا أكثر نعومة */
-    width: 80%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* زيادة تأثير الظل */
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .carousel {
     position: relative;
     width: 100%;
     height: 300px;
-    overflow: hidden; /* إخفاء الصور الزائدة */
+    overflow: hidden;
 }
 
 .carousel img {
@@ -81,7 +103,7 @@ header nav ul li a:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5); /* جعل الخلفية شفافة قليلاً */
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 10px;
@@ -105,14 +127,14 @@ header nav ul li a:hover {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: bold; /* جعل النص أكثر وضوحًا */
+    font-weight: bold;
 }
 
 .whatsapp-btn:hover {
     background-color: #1ebe5c;
 }
 
-/* قسم التواصل */
+/* Contact Section */
 .contact-section {
     background-color: #e6e0d2;
     text-align: center;
@@ -126,43 +148,36 @@ header nav ul li a:hover {
 }
 
 .social-logo {
-    width: 40px; /* تصغير حجم الأيقونات */
+    width: 40px;
     height: auto;
-    transition: transform 0.3s, filter 0.3s; /* إضافة تأثير للفلاتر */
+    transition: transform 0.3s, filter 0.3s;
 }
 
 .social-logo:hover {
     transform: scale(1.1);
-    filter: brightness(1.2); /* زيادة السطوع عند التمرير */
+    filter: brightness(1.2);
 }
 
-/* الفوتر */
+/* Footer */
 footer {
     background-color: #f7f7f7;
     padding: 20px;
     text-align: center;
     color: #4a5a54;
-    border-top: 2px solid #4a5a54; /* إضافة خط لتحديد الفوتر */
-}
-/* تحسين تأثير الانتقال للكاروسيل */
-.carousel img {
-    transition: opacity 0.5s ease-in-out;
+    border-top: 2px solid #4a5a54;
 }
 
-.carousel img.active {
-    opacity: 1;
-}
-
-.carousel img:not(.active) {
-    opacity: 0;
-}
-
-/* تحسين التباين للنصوص في الهيدر */
-header nav ul li a {
-    font-weight: bold;
-}
-
-/* إضافة تأثيرات إضافية للأزرار */
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+    
+    header nav ul li {
+        margin: 10px 0;
+    }
+    
+    .villa {
+        width: 100%;
+    }
 }
