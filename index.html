@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedad Jaradat Real Estate</title>
+  <link rel="icon" href="we.jpg" type="image/jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>موقع وداد جرادات العقاري</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#villas">الفلل المتاحة</a></li>
+        <li><a href="#contact">تواصل معنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="villas" class="villas-section">
+    <h2>الفلل المتاحة للإيجار</h2>
+
+    <div class="villa">
+      <h3>فيلا فاخرة في عمان</h3>
+      <div class="carousel">
+        <img src="villa1-1.jpg" alt="Villa 1 Image 1">
+        <img src="villa1-2.jpg" alt="Villa 1 Image 2">
+        <img src="villa1-3.jpg" alt="Villa 1 Image 3">
+        <button class="prev" onclick="plusSlides(-1)">السابق</button>
+        <button class="next" onclick="plusSlides(1)">التالي</button>
+      </div>
+      <p>3 غرف، 2 حمام، مساحة 200 متر</p>
+      <p>السعر: 1000 دينار/شهر</p>
+      <a href="https://wa.me/962796387822" target="_blank" class="whatsapp-btn">تواصل عبر الواتساب</a>
+    </div>
+    <div class="villa">
+        <h3>فيلا حديثة في عبدون</h3>
+        <div class="carousel" id="carousel2">
+          <img src="villa2-1.jpg" alt="Villa 2 Image 1" class="active">
+          <img src="villa2-2.jpg" alt="Villa 2 Image 2">
+          <img src="villa2-3.jpg" alt="Villa 2 Image 3">
+          <button class="prev" onclick="plusSlides(-1, 'carousel2')">السابق</button>
+          <button class="next" onclick="plusSlides(1, 'carousel2')">التالي</button>
+        </div>
+        <p>3 غرف نوم 3 حمامات جلسة خارجية</p>
+        <p>السعر: 20000 دينار</p>
+        <a href="https://wa.me/962796387822" target="_blank" class="whatsapp-btn">تواصل عبر الواتساب</a>
+      </div>
+    </section>
+    
+    <!-- يمكنك تكرار نفس الهيكل لفلل أخرى -->
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>تواصل معنا</h2>
+    <div class="contact-buttons">
+      <a href="https://wa.me/962796387822" target="_blank">
+        <img src="ws.png" alt="WhatsApp Logo" class="social-logo">
+      </a>
+      <a href="https://web.facebook.com/profile.php?id=61554902310865" target="_blank">
+        <img src="fs.png" alt="Facebook Logo" class="social-logo">
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 جميع الحقوق محفوظة لموقع وداد جرادات العقاري</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
